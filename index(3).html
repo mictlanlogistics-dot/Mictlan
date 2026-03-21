@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mictlan — Desarrollo Web · Logística · Almacenamiento · Marketing</title>
+<meta name="description" content="Mictlan impulsa tu negocio con desarrollo web, logística eficiente, almacenamiento seguro y marketing digital de alto impacto.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --purple:#533AB7; --purple-light:#EEEDFE; --purple-dark:#3C3489;
+  --teal:#1D9E75; --teal-light:#E1F5EE; --teal-dark:#0F6E56;
+  --amber:#BA7517; --amber-light:#FAEEDA;
+  --coral:#D85A30; --coral-light:#FAECE7;
+  --text:#1a1a2e; --text-muted:#6b6b8a;
+  --bg:#fafaf8; --bg-card:#ffffff;
+  --border:rgba(83,58,183,0.12); --radius:14px;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1rem 2.5rem;background:rgba(250,250,248,0.92);backdrop-filter:blur(12px);border-bottom:0.5px solid var(--border);}
+.nav-logo{font-family:'Cinzel',serif;font-size:20px;font-weight:600;letter-spacing:4px;color:var(--purple);}
+.nav-links{display:flex;gap:1.5rem;align-items:center;}
+.nav-links a{font-size:13px;font-weight:400;color:var(--text-muted);text-decoration:none;letter-spacing:0.5px;transition:color 0.2s;}
+.nav-links a:hover{color:var(--purple);}
+.nav-cta{background:var(--purple);color:#fff!important;padding:8px 20px;border-radius:8px;font-weight:500!important;}
+.nav-cta:hover{background:var(--purple-dark)!important;}
+
+.hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:8rem 2rem 5rem;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 50% 0%,rgba(83,58,183,0.08) 0%,transparent 70%),radial-gradient(ellipse 40% 30% at 80% 80%,rgba(29,158,117,0.06) 0%,transparent 60%);pointer-events:none;}
+.hero-eyebrow{font-size:11px;font-weight:500;letter-spacing:4px;color:var(--purple);text-transform:uppercase;background:var(--purple-light);padding:6px 16px;border-radius:99px;display:inline-block;margin-bottom:1.5rem;animation:fadeUp 0.6s ease both;}
+.hero-title{font-family:'Cinzel',serif;font-size:clamp(36px,6vw,68px);font-weight:600;line-height:1.1;color:var(--text);animation:fadeUp 0.7s 0.1s ease both;}
+.hero-title em{font-style:normal;color:var(--purple);}
+.hero-sub{max-width:560px;font-size:16px;font-weight:300;line-height:1.8;color:var(--text-muted);margin:1.5rem auto 0;animation:fadeUp 0.7s 0.2s ease both;}
+.hero-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:2.5rem;animation:fadeUp 0.7s 0.3s ease both;}
+.btn-primary{background:var(--purple);color:#fff;padding:14px 32px;border-radius:var(--radius);font-size:15px;font-weight:500;text-decoration:none;border:none;cursor:pointer;transition:background 0.2s,transform 0.15s;}
+.btn-primary:hover{background:var(--purple-dark);transform:translateY(-1px);}
+.btn-secondary{background:transparent;color:var(--purple);padding:14px 32px;border-radius:var(--radius);font-size:15px;font-weight:500;text-decoration:none;border:1.5px solid var(--purple);cursor:pointer;transition:background 0.2s,transform 0.15s;}
+.btn-secondary:hover{background:var(--purple-light);transform:translateY(-1px);}
+.hero-pillars{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:3.5rem;animation:fadeUp 0.7s 0.4s ease both;}
+.pillar{display:flex;align-items:center;gap:8px;background:var(--bg-card);border:0.5px solid var(--border);border-radius:99px;padding:8px 18px;font-size:13px;font-weight:400;color:var(--text-muted);text-decoration:none;transition:border-color 0.2s,color 0.2s;}
+.pillar:hover{color:var(--text);}
+.pillar-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;}
+
+.area-section{padding:5rem 2rem;}
+.area-inner{max-width:1100px;margin:0 auto;}
+.section-label{font-size:11px;font-weight:500;letter-spacing:4px;text-transform:uppercase;margin-bottom:1rem;}
+.section-title{font-family:'Cinzel',serif;font-size:clamp(26px,4vw,40px);font-weight:600;line-height:1.2;color:var(--text);margin-bottom:1rem;}
+.section-sub{font-size:15px;font-weight:300;color:var(--text-muted);line-height:1.8;max-width:500px;}
+.cards-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;margin-top:3rem;}
+.card{background:var(--bg-card);border:0.5px solid var(--border);border-radius:var(--radius);padding:2rem 1.5rem;transition:border-color 0.2s,transform 0.2s;}
+.card:hover{transform:translateY(-3px);}
+.card-icon{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:1.25rem;}
+.card-icon svg{width:20px;height:20px;}
+.card-name{font-size:16px;font-weight:500;color:var(--text);margin-bottom:8px;}
+.card-desc{font-size:13px;font-weight:300;color:var(--text-muted);line-height:1.7;}
+
+.area-web{background:#f8f7ff;}
+.area-web .section-label{color:var(--purple);}
+.area-web .card:hover{border-color:var(--purple);}
+.area-web .card-icon{background:var(--purple-light);}
+.area-web .card-icon svg{stroke:var(--purple);}
+
+.area-logistica{background:#f0fdf8;}
+.area-logistica .section-label{color:var(--teal);}
+.area-logistica .card:hover{border-color:var(--teal);}
+.area-logistica .card-icon{background:var(--teal-light);}
+.area-logistica .card-icon svg{stroke:var(--teal);}
+
+.area-almacen{background:#fdf8f0;}
+.area-almacen .section-label{color:var(--amber);}
+.area-almacen .card:hover{border-color:var(--amber);}
+.area-almacen .card-icon{background:var(--amber-light);}
+.area-almacen .card-icon svg{stroke:var(--amber);}
+
+.area-marketing{background:#fdf4f1;}
+.area-marketing .section-label{color:var(--coral);}
+.area-marketing .card:hover{border-color:var(--coral);}
+.area-marketing .card-icon{background:var(--coral-light);}
+.area-marketing .card-icon svg{stroke:var(--coral);}
+
+.planes-outer{padding:5rem 2rem 0;}
+.planes-wrap{background:#f5f4ff;border-radius:24px;padding:5rem 3rem;max-width:1100px;margin:0 auto;}
+.plans-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px;margin-top:3rem;}
+.plan-card{background:var(--bg-card);border:0.5px solid var(--border);border-radius:var(--radius);padding:2rem;position:relative;}
+.plan-card.featured{border:2px solid var(--purple);}
+.plan-badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--purple);color:#fff;font-size:11px;font-weight:500;letter-spacing:1px;padding:4px 16px;border-radius:99px;white-space:nowrap;}
+.plan-area-tag{display:inline-block;font-size:11px;color:var(--purple);background:var(--purple-light);padding:2px 10px;border-radius:99px;margin-bottom:8px;}
+.plan-name{font-size:13px;font-weight:500;color:var(--text-muted);letter-spacing:1px;text-transform:uppercase;}
+.plan-price{font-family:'Cinzel',serif;font-size:32px;font-weight:600;color:var(--purple);margin:10px 0 4px;}
+.plan-per{font-size:12px;color:var(--text-muted);margin-bottom:1.5rem;}
+.plan-divider{height:0.5px;background:var(--border);margin-bottom:1.25rem;}
+.plan-features{list-style:none;display:flex;flex-direction:column;gap:10px;}
+.plan-features li{font-size:13px;font-weight:300;color:var(--text-muted);display:flex;align-items:flex-start;gap:10px;line-height:1.5;}
+.check{width:16px;height:16px;border-radius:50%;background:var(--purple);flex-shrink:0;margin-top:1px;display:flex;align-items:center;justify-content:center;}
+.check::after{content:'';display:block;width:5px;height:3px;border-left:1.5px solid #fff;border-bottom:1.5px solid #fff;transform:rotate(-45deg) translate(0.5px,-0.5px);}
+
+.nosotros-section{padding:6rem 2rem;max-width:1100px;margin:0 auto;}
+.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px;margin-top:3rem;}
+.why-item{display:flex;flex-direction:column;gap:8px;}
+.why-num{font-family:'Cinzel',serif;font-size:36px;font-weight:600;color:var(--purple);opacity:0.3;}
+.why-title{font-size:15px;font-weight:500;color:var(--text);}
+.why-desc{font-size:13px;font-weight:300;color:var(--text-muted);line-height:1.7;}
+
+.contacto-outer{padding:0 2rem 6rem;}
+.contacto-wrap{background:var(--purple);border-radius:24px;padding:5rem 3rem;text-align:center;max-width:1100px;margin:0 auto;}
+.contacto-wrap .section-label{color:rgba(255,255,255,0.6);}
+.contacto-wrap .section-title{color:#fff;}
+.contacto-wrap .section-sub{color:rgba(255,255,255,0.7);margin:0 auto;}
+.contact-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:2.5rem;}
+.btn-wa{background:var(--teal);color:#fff;padding:14px 32px;border-radius:var(--radius);font-size:15px;font-weight:500;text-decoration:none;border:none;cursor:pointer;transition:background 0.2s;}
+.btn-wa:hover{background:var(--teal-dark);}
+.btn-white{background:rgba(255,255,255,0.15);color:#fff;padding:14px 32px;border-radius:var(--radius);font-size:15px;font-weight:500;text-decoration:none;border:1.5px solid rgba(255,255,255,0.4);cursor:pointer;transition:background 0.2s;}
+.btn-white:hover{background:rgba(255,255,255,0.25);}
+
+footer{text-align:center;padding:2rem;font-size:12px;color:var(--text-muted);border-top:0.5px solid var(--border);}
+footer span{color:var(--purple);}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
+
+@media(max-width:600px){
+  nav{padding:1rem 1.25rem;}
+  .nav-links{display:none;}
+  .area-section{padding:3.5rem 1.25rem;}
+  .planes-outer{padding:3rem 1.25rem 0;}
+  .planes-wrap{padding:3rem 1.25rem;}
+  .nosotros-section{padding:4rem 1.25rem;}
+  .contacto-outer{padding:0 1.25rem 4rem;}
+  .contacto-wrap{padding:3rem 1.25rem;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">MICTLAN</div>
+  <div class="nav-links">
+    <a href="web.html">Web</a>
+    <a href="proximamente.html">Logística</a>
+    <a href="proximamente.html">Almacén</a>
+    <a href="proximamente.html">Marketing</a>
+    <a href="#planes">Precios</a>
+    <a href="#contacto" class="nav-cta">Cotizar</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-eyebrow">Morelia, México · Servicios para todo el mundo</div>
+  <h1 class="hero-title">Una empresa,<br>todas las <em>soluciones</em></h1>
+  <p class="hero-sub">Mictlan impulsa tu negocio con desarrollo web, logística eficiente, almacenamiento seguro y marketing digital de alto impacto.</p>
+  <div class="hero-btns">
+    <a href="#contacto" class="btn-primary">Solicitar cotización</a>
+    <a href="#web" class="btn-secondary">Conocer servicios</a>
+  </div>
+  <div class="hero-pillars">
+    <a href="web.html" class="pillar"><span class="pillar-dot" style="background:var(--purple)"></span>Desarrollo Web</a>
+    <a href="proximamente.html" class="pillar"><span class="pillar-dot" style="background:var(--teal)"></span>Logística</a>
+    <a href="proximamente.html" class="pillar"><span class="pillar-dot" style="background:var(--amber)"></span>Almacenamiento</a>
+    <a href="proximamente.html" class="pillar"><span class="pillar-dot" style="background:var(--coral)"></span>Marketing</a>
+  </div>
+</div>
+
+<!-- DESARROLLO WEB -->
+<div id="web" class="area-section area-web">
+  <div class="area-inner">
+    <div class="section-label">Desarrollo web</div>
+    <h2 class="section-title">Tu presencia digital,<br>profesional y segura</h2>
+    <p class="section-sub">Páginas web a medida para negocios, abogados, médicos y comercios sin importar dónde se encuentren.</p>
+    <div class="cards-grid">
+      <div class="card">
+        <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
+        <div class="card-name">Diseño web</div>
+        <div class="card-desc">Páginas profesionales, modernas y adaptadas a tu giro. Diseño único e irrepetible para tu marca.</div>
+      </div>
+      <div class="card">
+        <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></div>
+        <div class="card-name">SEO</div>
+        <div class="card-desc">Optimización para que Google te encuentre primero cuando alguien busca tu servicio, donde sea.</div>
+      </div>
+      <div class="card">
+        <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <div class="card-name">Ciberseguridad</div>
+        <div class="card-desc">Tu sitio protegido contra hackeos, ataques y vulnerabilidades. SSL y firewall incluidos sin costo extra.</div>
+      </div>
+      <div class="card">
+        <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
+        <div class="card-name">Mantenimiento</div>
+        <div class="card-desc">Cambios y actualizaciones ilimitados cuando los necesites. Tu página siempre al día y funcionando.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- LOGÍSTICA -->
+<div id="logistica" class="area-section area-logistica">
+  <div class="area-inner">
+    <div class="section-label">Logística</div>
+    <h2 class="section-title">Movemos tu mercancía,<br>tú mueves tu negocio</h2>
+    <p class="section-sub">Soluciones logísticas ágiles y confiables para que tus productos lleguen a tiempo, siempre.</p>
+    <div class="cards-grid">
+      <div class="card">
+        <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+        <div class="card-name">Transporte de mercancía</div>
+        <div class="card-desc">Traslado seguro de tus productos con seguimiento en tiempo real y entrega puntual garantizada.</div>
+      </div>
+      <div class="card">
+        <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
+        <div class="card-name">Logística de última milla</div>
+        <div class="card-desc">Entrega final al cliente con rapidez y eficiencia. El último paso del envío, el más importante para tu cliente.</div>
+      </div>
+      <div class="card">
+        <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M9 17H5a2 2 0 01-2-2V5a2 2 0 012-2h11a2 2 0 012 2v3"/><path d="M13 21l4-4-4-4"/><path d="M17 17H9"/></svg></div>
+        <div class="card-name">Gestión de envíos</div>
+        <div class="card-desc">Coordinación integral de tus envíos: documentación, rutas, tiempos y costos siempre optimizados.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ALMACENAMIENTO -->
+<div id="almacenamiento" class="area-section area-almacen">
+  <div class="area-inner">
+    <div class="section-label">Almacenamiento</div>
+    <h2 class="section-title">Tu inventario seguro,<br>ordenado y listo</h2>
+    <p class="section-sub">Espacios seguros y sistemas inteligentes para que tu mercancía esté siempre bajo control total.</p>
+    <div class="cards-grid">
+      <div class="card">
+        <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+        <div class="card-name">Bodega y resguardo</div>
+        <div class="card-desc">Instalaciones seguras para almacenar tu mercancía con acceso controlado y monitoreo constante las 24 horas.</div>
+      </div>
+      <div class="card">
+        <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><path d="M9 12h6M9 16h4"/></svg></div>
+        <div class="card-name">Control de inventario</div>
+        <div class="card-desc">Sistema de seguimiento de entradas, salidas y existencias. Siempre sabrás cuánto tienes y dónde está.</div>
+      </div>
+      <div class="card">
+        <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M20 7H4a2 2 0 00-2 2v6a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg></div>
+        <div class="card-name">Fulfillment</div>
+        <div class="card-desc">Recibimos, almacenamos, empacamos y enviamos tus pedidos. Tú vendes, nosotros lo hacemos llegar.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MARKETING -->
+<div id="marketing" class="area-section area-marketing">
+  <div class="area-inner">
+    <div class="section-label">Marketing digital</div>
+    <h2 class="section-title">Conecta con más clientes,<br>crece más rápido</h2>
+    <p class="section-sub">Estrategias de marketing digital diseñadas para hacer crecer tu negocio y posicionar tu marca.</p>
+    <div class="cards-grid">
+      <div class="card">
+        <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></div>
+        <div class="card-name">Redes sociales</div>
+        <div class="card-desc">Gestión profesional de tus redes: publicaciones, comunidad y crecimiento orgánico de seguidores.</div>
+      </div>
+      <div class="card">
+        <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+        <div class="card-name">Publicidad en Google y Meta</div>
+        <div class="card-desc">Campañas pagadas segmentadas para llegar exactamente a tus clientes ideales con el menor costo posible.</div>
+      </div>
+      <div class="card">
+        <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
+        <div class="card-name">Diseño de contenido</div>
+        <div class="card-desc">Creación de material visual y escrito que comunica tu marca con claridad, estilo y consistencia.</div>
+      </div>
+      <div class="card">
+        <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></div>
+        <div class="card-name">Estrategia de marca</div>
+        <div class="card-desc">Definición de identidad, posicionamiento y plan de comunicación para que tu marca sea memorable.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PLANES WEB -->
+<div class="planes-outer" id="planes">
+  <div class="planes-wrap">
+    <div class="section-label" style="color:var(--purple);">Precios de desarrollo web</div>
+    <h2 class="section-title">Elige tu plan web</h2>
+    <p class="section-sub">Sin letras pequeñas. Sin sorpresas. Todo incluido desde el primer día.</p>
+    <div class="plans-grid">
+      <div class="plan-card">
+        <div class="plan-area-tag">Desarrollo web</div>
+        <div class="plan-name">Creación web</div>
+        <div class="plan-price">$15,000</div>
+        <div class="plan-per">pago único · MXN</div>
+        <div class="plan-divider"></div>
+        <ul class="plan-features">
+          <li><span class="check"></span>Diseño profesional a medida</li>
+          <li><span class="check"></span>Dominio y hospedaje incluidos</li>
+          <li><span class="check"></span>Adaptado a móvil y desktop</li>
+          <li><span class="check"></span>SEO básico incluido</li>
+          <li><span class="check"></span>Entrega en 7-10 días</li>
+        </ul>
+      </div>
+      <div class="plan-card featured">
+        <div class="plan-badge">Recomendado</div>
+        <div class="plan-area-tag">Desarrollo web</div>
+        <div class="plan-name">Plan mantenimiento</div>
+        <div class="plan-price">$3,000</div>
+        <div class="plan-per">por semana · plan 6 meses</div>
+        <div class="plan-divider"></div>
+        <ul class="plan-features">
+          <li><span class="check"></span>Cambios y actualizaciones ilimitadas</li>
+          <li><span class="check"></span>Sin restricciones de edición</li>
+          <li><span class="check"></span>Ciberseguridad incluida</li>
+          <li><span class="check"></span>Soporte prioritario directo</li>
+          <li><span class="check"></span>Respaldo semanal de tu sitio</li>
+        </ul>
+      </div>
+      <div class="plan-card">
+        <div class="plan-area-tag">Desarrollo web</div>
+        <div class="plan-name">Cambio individual</div>
+        <div class="plan-price">$2,000</div>
+        <div class="plan-per">por cambio · sin plan</div>
+        <div class="plan-divider"></div>
+        <ul class="plan-features">
+          <li><span class="check"></span>Cambios menores de contenido</li>
+          <li><span class="check"></span>Actualización de texto o imagen</li>
+          <li><span class="check"></span>Entrega en 24-48 hrs</li>
+          <li><span class="check"></span>Sin compromiso de permanencia</li>
+        </ul>
+      </div>
+    </div>
+    <p style="text-align:center;margin-top:2rem;font-size:13px;color:var(--text-muted);">
+      ¿Necesitas cotización para logística, almacenamiento o marketing?
+      <a href="#contacto" style="color:var(--purple);text-decoration:none;font-weight:500;">Contáctanos directamente →</a>
+    </p>
+  </div>
+</div>
+
+<!-- NOSOTROS -->
+<div class="nosotros-section">
+  <div class="section-label" style="color:var(--purple);">Por qué elegirnos</div>
+  <h2 class="section-title">Basados en Morelia,<br>trabajamos para todo el mundo</h2>
+  <p class="section-sub">Un solo aliado para todas las necesidades de tu negocio: digital, logística y presencia de marca.</p>
+  <div class="why-grid">
+    <div class="why-item">
+      <div class="why-num">01</div>
+      <div class="why-title">Todo en un solo lugar</div>
+      <div class="why-desc">Web, logística, almacén y marketing. No necesitas buscar varios proveedores, Mictlan lo tiene todo.</div>
+    </div>
+    <div class="why-item">
+      <div class="why-num">02</div>
+      <div class="why-title">Presencia 24/7</div>
+      <div class="why-desc">Tu página y tus operaciones trabajan para ti mientras duermes. Clientes potenciales a cualquier hora.</div>
+    </div>
+    <div class="why-item">
+      <div class="why-num">03</div>
+      <div class="why-title">Credibilidad inmediata</div>
+      <div class="why-desc">Una presencia digital profesional genera confianza antes de que el cliente te contacte por primera vez.</div>
+    </div>
+    <div class="why-item">
+      <div class="why-num">04</div>
+      <div class="why-title">Sin complicaciones</div>
+      <div class="why-desc">Nosotros hacemos todo. Tú solo nos dices qué quieres y lo hacemos realidad, rápido y bien hecho.</div>
+    </div>
+  </div>
+</div>
+
+<!-- CONTACTO -->
+<div class="contacto-outer">
+  <div class="contacto-wrap" id="contacto">
+    <div class="section-label">Hablemos</div>
+    <h2 class="section-title">¿Listo para impulsar<br>tu negocio?</h2>
+    <p class="section-sub">Contáctanos hoy y recibe tu cotización sin costo. Respondemos el mismo día.</p>
+    <div class="contact-btns">
+      <a href="https://wa.me/524434425827?text=Hola%20Mictlan,%20quiero%20información%20sobre%20sus%20servicios" class="btn-wa" target="_blank">WhatsApp</a>
+      <a href="/cdn-cgi/l/email-protection#64090d071008050a080b030d17100d0717240309050d084a070b095b1711060e01071059270b100d1e05070da7d70a4156540001415654170116120d070d0b1741565449415654290d071008050a" class="btn-white">Correo electrónico</a>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 <span>Mictlan</span> · Desarrollo Web
