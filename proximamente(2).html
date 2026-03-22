@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Próximamente — Mictlan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --purple:#533AB7; --purple-light:#EEEDFE; --purple-dark:#3C3489;
+  --teal:#1D9E75; --teal-dark:#0F6E56;
+  --text:#1a1a2e; --text-muted:#6b6b8a;
+  --bg:#fafaf8; --bg-card:#ffffff;
+  --border:rgba(83,58,183,0.12); --radius:14px;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;display:flex;flex-direction:column;}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1rem 2.5rem;background:rgba(250,250,248,0.92);backdrop-filter:blur(12px);border-bottom:0.5px solid var(--border);}
+.nav-logo{font-family:'Cinzel',serif;font-size:20px;font-weight:600;letter-spacing:4px;color:var(--purple);text-decoration:none;}
+.nav-back{display:flex;align-items:center;gap:6px;font-size:13px;color:var(--text-muted);text-decoration:none;transition:color 0.2s;}
+.nav-back:hover{color:var(--purple);}
+.nav-back svg{width:16px;height:16px;stroke:currentColor;fill:none;}
+
+.main{flex:1;display:flex;align-items:center;justify-content:center;text-align:center;padding:6rem 2rem;}
+.content{max-width:520px;}
+
+.badge{display:inline-flex;align-items:center;gap:8px;background:var(--purple-light);color:var(--purple);font-size:11px;font-weight:500;letter-spacing:3px;text-transform:uppercase;padding:6px 16px;border-radius:99px;margin-bottom:2rem;}
+.badge-dot{width:6px;height:6px;border-radius:50%;background:var(--purple);animation:pulse 1.5s ease infinite;}
+
+.title{font-family:'Cinzel',serif;font-size:clamp(36px,6vw,64px);font-weight:600;line-height:1.1;color:var(--text);margin-bottom:1.25rem;}
+.title em{font-style:normal;color:var(--purple);}
+.subtitle{font-size:16px;font-weight:300;line-height:1.8;color:var(--text-muted);margin-bottom:2.5rem;}
+
+.notify-box{background:var(--bg-card);border:0.5px solid var(--border);border-radius:var(--radius);padding:1.5rem;margin-bottom:2rem;}
+.notify-title{font-size:14px;font-weight:500;color:var(--text);margin-bottom:4px;}
+.notify-sub{font-size:13px;color:var(--text-muted);margin-bottom:1rem;}
+.notify-input-wrap{display:flex;gap:8px;}
+.notify-input{flex:1;padding:10px 14px;border:0.5px solid var(--border);border-radius:8px;font-size:13px;font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);outline:none;}
+.notify-input:focus{border-color:var(--purple);}
+.notify-btn{background:var(--purple);color:#fff;padding:10px 20px;border-radius:8px;font-size:13px;font-weight:500;border:none;cursor:pointer;white-space:nowrap;transition:background 0.2s;}
+.notify-btn:hover{background:var(--purple-dark);}
+
+.back-btn{display:inline-flex;align-items:center;gap:8px;color:var(--purple);font-size:14px;font-weight:500;text-decoration:none;transition:gap 0.2s;}
+.back-btn:hover{gap:12px;}
+.back-btn svg{width:16px;height:16px;stroke:currentColor;fill:none;}
+
+.services-preview{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:3rem;}
+.svc-pill{display:flex;align-items:center;gap:6px;background:var(--bg-card);border:0.5px solid var(--border);border-radius:99px;padding:7px 16px;font-size:12px;color:var(--text-muted);text-decoration:none;transition:border-color 0.2s,color 0.2s;}
+.svc-pill:hover{border-color:var(--purple);color:var(--purple);}
+.svc-dot{width:7px;height:7px;border-radius:50%;}
+
+footer{text-align:center;padding:1.5rem;font-size:12px;color:var(--text-muted);border-top:0.5px solid var(--border);}
+footer span{color:var(--purple);}
+
+@keyframes pulse{0%,100%{opacity:1;}50%{opacity:0.4;}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:translateY(0);}}
+.content>*{animation:fadeUp 0.6s ease both;}
+.badge{animation-delay:0s;}
+.title{animation-delay:0.1s;}
+.subtitle{animation-delay:0.2s;}
+.notify-box{animation-delay:0.3s;}
+.back-btn{animation-delay:0.35s;}
+.services-preview{animation-delay:0.4s;}
+</style>
+<link rel="icon" type="image/png" href="logo.png">
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">MICTLAN</a>
+  <a href="index.html" class="nav-back">
+    <svg viewBox="0 0 24 24" stroke-width="2"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+    Regresar
+  </a>
+</nav>
+
+<div class="main">
+  <div class="content">
+    <div class="badge"><span class="badge-dot"></span>En construcción</div>
+    <h1 class="title">Próxima<em>mente</em></h1>
+    <p class="subtitle">Estamos trabajando para traerte esta sección completa. Muy pronto podrás conocer todos los detalles, precios y servicios disponibles.</p>
+
+    <div class="notify-box">
+      <div class="notify-title">¿Quieres que te avisemos cuando esté listo?</div>
+      <div class="notify-sub">Déjanos tu correo y serás el primero en saberlo.</div>
+      <div class="notify-input-wrap">
+        <input type="email" class="notify-input" placeholder="tucorreo@email.com" id="emailInput">
+        <button class="notify-btn" onclick="handleNotify()">Avisar</button>
+      </div>
+      <div id="notify-msg" style="font-size:12px;color:var(--teal);margin-top:8px;display:none;">¡Listo! Te avisaremos pronto. 🚀</div>
+    </div>
+
+    <a href="index.html" class="back-btn">
+      <svg viewBox="0 0 24 24" stroke-width="2"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+      Volver al inicio
+    </a>
+
+    <div class="services-preview">
+      <a href="web.html" class="svc-pill"><span class="svc-dot" style="background:#533AB7"></span>Desarrollo Web</a>
+      <a href="proximamente.html" class="svc-pill"><span class="svc-dot" style="background:#1D9E75"></span>Logística</a>
+      <a href="proximamente.html" class="svc-pill"><span class="svc-dot" style="background:#BA7517"></span>Almacenamiento</a>
+      <a href="proximamente.html" class="svc-pill"><span class="svc-dot" style="background:#D85A30"></span>Marketing</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>© 2026 <span>Mictlan</span> · Morelia, Michoacán</p>
+</footer>
+
+<script>
+function handleNotify() {
+  const email = document.getElementById('emailInput').value;
+  if (email && email.includes('@')) {
+    document.getElementById('notify-msg').style.display = 'block';
+    document.getElementById('emailInput').value = '';
+  } else {
+    document.getElementById('emailInput').style.borderColor = '#D85A30';
+    setTimeout(() => document.getElementById('emailInput').style.borderColor = '', 1500);
+  }
+}
+</script>
+</body>
+</html>
