@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mictlan — Diseño de Páginas Web, Logística y Marketing Digital</title>
+<meta name="description" content="Mictlan ofrece diseño de páginas web profesionales, logística, almacenamiento y marketing digital para negocios, abogados, médicos y comercios en toda la República Mexicana y el mundo.">
+<meta name="keywords" content="diseño web profesional, páginas web para negocios, logística México, almacenamiento y fulfillment, marketing digital, publicidad Google Meta, SEO México">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Mictlan — Diseño Web, Logística y Marketing Digital">
+<meta property="og:description" content="Páginas web profesionales, logística eficiente, almacenamiento seguro y marketing digital para impulsar tu negocio en toda la República Mexicana y el mundo.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mictlanlogistics-dot.github.io/Mictlan">
+<meta property="og:image" content="https://mictlanlogistics-dot.github.io/Mictlan/logo.png">
+<link rel="canonical" href="https://mictlanlogistics-dot.github.io/Mictlan">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --purple:#533AB7;--purple-light:#EEEDFE;--purple-dark:#3C3489;
+  --teal:#1D9E75;--teal-light:#E1F5EE;--teal-dark:#0F6E56;
+  --amber:#BA7517;--amber-light:#FAEEDA;
+  --coral:#D85A30;--coral-light:#FAECE7;
+  --text:#1a1a2e;--text-muted:#6b6b8a;
+  --bg:#fafaf8;--bg-card:#ffffff;
+  --border:rgba(83,58,183,0.12);--radius:14px;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1rem 2.5rem;background:rgba(250,250,248,0.92);backdrop-filter:blur(12px);border-bottom:0.5px solid var(--border);}
+.nav-logo{font-family:'Cinzel',serif;font-size:20px;font-weight:600;letter-spacing:4px;color:var(--purple);text-decoration:none;display:flex;align-items:center;gap:10px;}
+.nav-links{display:flex;gap:1.5rem;align-items:center;}
+.nav-links a{font-size:13px;color:var(--text-muted);text-decoration:none;transition:color 0.2s;}
+.nav-links a:hover{color:var(--purple);}
+.nav-cta{background:var(--purple);color:#fff!important;padding:8px 20px;border-radius:8px;font-weight:500!important;}
+.nav-cta:hover{background:var(--purple-dark)!important;}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:8rem 2rem 5rem;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 50% 0%,rgba(83,58,183,0.08) 0%,transparent 70%),radial-gradient(ellipse 40% 30% at 80% 80%,rgba(29,158,117,0.06) 0%,transparent 60%);pointer-events:none;}
+.hero-eyebrow{font-size:11px;font-weight:500;letter-spacing:4px;color:var(--purple);text-transform:uppercase;background:var(--purple-light);padding:6px 16px;border-radius:99px;display:inline-block;margin-bottom:1.5rem;animation:fadeUp 0.6s ease both;}
+.hero-title{font-family:'Cinzel',serif;font-size:clamp(36px,6vw,68px);font-weight:600;line-height:1.1;color:var(--text);animation:fadeUp 0.7s 0.1s ease both;}
+.hero-title em{font-style:normal;color:var(--purple);}
+.hero-sub{max-width:560px;font-size:16px;font-weight:300;line-height:1.8;color:var(--text-muted);margin:1.5rem auto 0;animation:fadeUp 0.7s 0.2s ease both;}
+.hero-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:2.5rem;animation:fadeUp 0.7s 0.3s ease both;}
+.btn-primary{background:var(--purple);color:#fff;padding:14px 32px;border-radius:var(--radius);font-size:15px;font-weight:500;text-decoration:none;transition:background 0.2s,transform 0.15s;}
+.btn-primary:hover{background:var(--purple-dark);transform:translateY(-1px);}
+.btn-secondary{background:transparent;color:var(--purple);padding:14px 32px;border-radius:var(--radius);font-size:15px;font-weight:500;text-decoration:none;border:1.5px solid var(--purple);transition:background 0.2s;}
+.btn-secondary:hover{background:var(--purple-light);}
+.hero-pillars{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:3.5rem;animation:fadeUp 0.7s 0.4s ease both;}
+.pillar{display:flex;align-items:center;gap:8px;background:var(--bg-card);border:0.5px solid var(--border);border-radius:99px;padding:8px 18px;font-size:13px;color:var(--text-muted);text-decoration:none;transition:border-color 0.2s,color 0.2s;}
+.pillar:hover{color:var(--text);border-color:rgba(83,58,183,0.3);}
+.pillar-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;}
+
+/* SERVICIOS RESUMEN */
+.services-section{padding:6rem 2rem;max-width:1100px;margin:0 auto;}
+.section-label{font-size:11px;font-weight:500;letter-spacing:4px;color:var(--purple);text-transform:uppercase;margin-bottom:1rem;}
+.section-title{font-family:'Cinzel',serif;font-size:clamp(26px,4vw,40px);font-weight:600;line-height:1.2;color:var(--text);margin-bottom:1rem;}
+.section-sub{font-size:15px;font-weight:300;color:var(--text-muted);line-height:1.8;max-width:500px;margin-bottom:3rem;}
+
+.svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;}
+.svc-card{border-radius:20px;padding:2.5rem 2rem;text-decoration:none;display:flex;flex-direction:column;gap:1rem;transition:transform 0.2s,box-shadow 0.2s;position:relative;overflow:hidden;}
+.svc-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,0.08);}
+.svc-card-web{background:#f5f4ff;border:0.5px solid rgba(83,58,183,0.15);}
+.svc-card-logistica{background:#f0fdf8;border:0.5px solid rgba(29,158,117,0.15);}
+.svc-card-almacen{background:#fdf8f0;border:0.5px solid rgba(186,117,23,0.15);}
+.svc-card-marketing{background:#fdf4f1;border:0.5px solid rgba(216,90,48,0.15);}
+
+.svc-card-icon{width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;}
+.svc-card-icon svg{width:24px;height:24px;}
+.svc-card-web .svc-card-icon{background:var(--purple-light);}
+.svc-card-web .svc-card-icon svg{stroke:var(--purple);}
+.svc-card-logistica .svc-card-icon{background:var(--teal-light);}
+.svc-card-logistica .svc-card-icon svg{stroke:var(--teal);}
+.svc-card-almacen .svc-card-icon{background:var(--amber-light);}
+.svc-card-almacen .svc-card-icon svg{stroke:var(--amber);}
+.svc-card-marketing .svc-card-icon{background:var(--coral-light);}
+.svc-card-marketing .svc-card-icon svg{stroke:var(--coral);}
+
+.svc-card-label{font-size:11px;font-weight:500;letter-spacing:3px;text-transform:uppercase;}
+.svc-card-web .svc-card-label{color:var(--purple);}
+.svc-card-logistica .svc-card-label{color:var(--teal);}
+.svc-card-almacen .svc-card-label{color:var(--amber);}
+.svc-card-marketing .svc-card-label{color:var(--coral);}
+
+.svc-card-title{font-family:'Cinzel',serif;font-size:20px;font-weight:600;color:var(--text);line-height:1.2;}
+.svc-card-desc{font-size:13px;font-weight:300;color:var(--text-muted);line-height:1.7;flex:1;}
+.svc-card-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:0.5rem;}
+.svc-tag{font-size:11px;padding:3px 10px;border-radius:99px;font-weight:400;}
+.svc-card-web .svc-tag{background:rgba(83,58,183,0.1);color:var(--purple);}
+.svc-card-logistica .svc-tag{background:rgba(29,158,117,0.1);color:var(--teal);}
+.svc-card-almacen .svc-tag{background:rgba(186,117,23,0.1);color:var(--amber);}
+.svc-card-marketing .svc-tag{background:rgba(216,90,48,0.1);color:var(--coral);}
+
+.svc-card-link{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:500;margin-top:0.5rem;}
+.svc-card-web .svc-card-link{color:var(--purple);}
+.svc-card-logistica .svc-card-link{color:var(--teal);}
+.svc-card-almacen .svc-card-link{color:var(--amber);}
+.svc-card-marketing .svc-card-link{color:var(--coral);}
+.svc-card-link svg{width:14px;height:14px;stroke:currentColor;transition:transform 0.2s;}
+.svc-card:hover .svc-card-link svg{transform:translateX(3px);}
+
+/* NOSOTROS */
+.nosotros{padding:0 2rem 6rem;max-width:1100px;margin:0 auto;}
+.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px;margin-top:3rem;}
+.why-item{display:flex;flex-direction:column;gap:8px;}
+.why-num{font-family:'Cinzel',serif;font-size:36px;font-weight:600;color:var(--purple);opacity:0.25;}
+.why-title{font-size:15px;font-weight:500;color:var(--text);}
+.why-desc{font-size:13px;font-weight:300;color:var(--text-muted);line-height:1.7;}
+
+/* CONTACTO */
+.contacto-outer{padding:0 2rem 6rem;}
+.contacto-wrap{background:var(--purple);border-radius:24px;padding:5rem 3rem;text-align:center;max-width:1100px;margin:0 auto;}
+.contacto-wrap .section-label{color:rgba(255,255,255,0.6);}
+.contacto-wrap .section-title{color:#fff;}
+.contacto-sub{font-size:15px;font-weight:300;color:rgba(255,255,255,0.7);max-width:460px;margin:0 auto;line-height:1.8;}
+.contact-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:2.5rem;}
+.btn-wa{background:var(--teal);color:#fff;padding:14px 32px;border-radius:var(--radius);font-size:15px;font-weight:500;text-decoration:none;transition:background 0.2s;}
+.btn-wa:hover{background:var(--teal-dark);}
+.btn-white{background:rgba(255,255,255,0.15);color:#fff;padding:14px 32px;border-radius:var(--radius);font-size:15px;font-weight:500;text-decoration:none;border:1.5px solid rgba(255,255,255,0.4);transition:background 0.2s;}
+.btn-white:hover{background:rgba(255,255,255,0.25);}
+
+footer{text-align:center;padding:2rem;font-size:12px;color:var(--text-muted);border-top:0.5px solid var(--border);}
+footer span{color:var(--purple);}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
+
+@media(max-width:600px){
+  nav{padding:1rem 1.25rem;}
+  .nav-links .hide-mobile{display:none;}
+  .services-section{padding:4rem 1.25rem;}
+  .nosotros{padding:0 1.25rem 4rem;}
+  .contacto-outer{padding:0 1.25rem 4rem;}
+  .contacto-wrap{padding:3rem 1.25rem;}
+}
+</style>
+<link rel="icon" type="image/png" href="logo.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Mictlan",
+  "url": "https://mictlanlogistics-dot.github.io/Mictlan",
+  "logo": "https://mictlanlogistics-dot.github.io/Mictlan/logo.png",
+  "description": "Agencia de diseño web, logística, almacenamiento y marketing digital en Morelia, México.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Morelia",
+    "addressRegion": "Michoacán",
+    "addressCountry": "MX"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+52-443-442-5827",
+    "contactType": "customer service",
+    "email": "mictlanlogistics@gmail.com"
+  },
+  "sameAs": [],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Servicios Mictlan",
+    "itemListElement": [
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Diseño de páginas web profesionales"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "SEO y posicionamiento en Google"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Logística y transporte de mercancía"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Almacenamiento y fulfillment"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Marketing digital y publicidad en Google y Meta"}}
+    ]
+  }
+}
+</script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo">MICTLAN</a>
+  <div class="nav-links">
+    <a href="web.html" class="hide-mobile">Web</a>
+    <a href="proximamente.html" class="hide-mobile">Logística</a>
+    <a href="proximamente.html" class="hide-mobile">Almacén</a>
+    <a href="proximamente.html" class="hide-mobile">Marketing</a>
+    <a href="#contacto" class="nav-cta">Cotizar</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-eyebrow">Morelia, México · Servicios para todo el mundo</div>
+  <h1 class="hero-title">Una empresa,<br>todas las <em>soluciones</em></h1>
+  <p class="hero-sub">Mictlan impulsa tu negocio con desarrollo web, logística eficiente, almacenamiento seguro y marketing digital de alto impacto.</p>
+  <div class="hero-btns">
+    <a href="#servicios" class="btn-primary">Conocer servicios</a>
+    <a href="#contacto" class="btn-secondary">Cotizar ahora</a>
+  </div>
+  <div class="hero-pillars">
+    <a href="web.html" class="pillar"><span class="pillar-dot" style="background:var(--purple)"></span>Desarrollo Web</a>
+    <a href="proximamente.html" class="pillar"><span class="pillar-dot" style="background:var(--teal)"></span>Logística</a>
+    <a href="proximamente.html" class="pillar"><span class="pillar-dot" style="background:var(--amber)"></span>Almacenamiento</a>
+    <a href="proximamente.html" class="pillar"><span class="pillar-dot" style="background:var(--coral)"></span>Marketing</a>
+  </div>
+</div>
+
+<!-- SERVICIOS RESUMEN -->
+<div class="services-section" id="servicios">
+  <div class="section-label">Nuestros servicios</div>
+  <h2 class="section-title">Todo lo que tu negocio<br>necesita en un solo lugar</h2>
+  <p class="section-sub">Haz clic en cada servicio para conocer todos los detalles, precios y beneficios.</p>
+  <div class="svc-grid">
+
+    <!-- WEB -->
+    <a href="web.html" class="svc-card svc-card-web">
+      <div class="svc-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
+      <div class="svc-card-label">Desarrollo web</div>
+      <div class="svc-card-title">Páginas web profesionales</div>
+      <div class="svc-card-desc">Diseño, SEO, ciberseguridad y mantenimiento para que tu negocio brille en internet sin importar dónde estés.</div>
+      <div class="svc-card-tags">
+        <span class="svc-tag">Diseño web</span>
+        <span class="svc-tag">SEO</span>
+        <span class="svc-tag">Seguridad</span>
+        <span class="svc-tag">Mantenimiento</span>
+      </div>
+      <div class="svc-card-link">Ver servicio completo <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+    </a>
+
+    <!-- LOGÍSTICA -->
+    <a href="proximamente.html" class="svc-card svc-card-logistica">
+      <div class="svc-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+      <div class="svc-card-label">Logística</div>
+      <div class="svc-card-title">Movemos tu mercancía</div>
+      <div class="svc-card-desc">Transporte, última milla y gestión de envíos para que tus productos lleguen a tiempo, siempre y sin contratiempos.</div>
+      <div class="svc-card-tags">
+        <span class="svc-tag">Transporte</span>
+        <span class="svc-tag">Última milla</span>
+        <span class="svc-tag">Gestión de envíos</span>
+      </div>
+      <div class="svc-card-link">Ver servicio completo <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+    </a>
+
+    <!-- ALMACENAMIENTO -->
+    <a href="proximamente.html" class="svc-card svc-card-almacen">
+      <div class="svc-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+      <div class="svc-card-label">Almacenamiento</div>
+      <div class="svc-card-title">Tu inventario bajo control</div>
+      <div class="svc-card-desc">Bodega segura, control de inventario y fulfillment completo. Recibimos, guardamos, empacamos y enviamos por ti.</div>
+      <div class="svc-card-tags">
+        <span class="svc-tag">Bodega</span>
+        <span class="svc-tag">Inventario</span>
+        <span class="svc-tag">Fulfillment</span>
+      </div>
+      <div class="svc-card-link">Ver servicio completo <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+    </a>
+
+    <!-- MARKETING -->
+    <a href="proximamente.html" class="svc-card svc-card-marketing">
+      <div class="svc-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+      <div class="svc-card-label">Marketing digital</div>
+      <div class="svc-card-title">Conecta con más clientes</div>
+      <div class="svc-card-desc">Redes sociales, publicidad en Google y Meta, diseño de contenido y estrategia de marca para hacer crecer tu negocio.</div>
+      <div class="svc-card-tags">
+        <span class="svc-tag">Redes sociales</span>
+        <span class="svc-tag">Google & Meta</span>
+        <span class="svc-tag">Contenido</span>
+      </div>
+      <div class="svc-card-link">Ver servicio completo <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+    </a>
+
+  </div>
+</div>
+
+<!-- POR QUÉ MICTLAN -->
+<div class="nosotros" id="nosotros">
+  <div class="section-label">Por qué elegirnos</div>
+  <h2 class="section-title">Basados en Morelia,<br>trabajamos para todo el mundo</h2>
+  <p class="section-sub" style="max-width:100%">Un solo aliado para todas las necesidades de tu negocio: digital, logística y presencia de marca.</p>
+  <div class="why-grid">
+    <div class="why-item">
+      <div class="why-num">01</div>
+      <div class="why-title">Todo en un solo lugar</div>
+      <div class="why-desc">Web, logística, almacén y marketing. No necesitas buscar varios proveedores, Mictlan lo tiene todo.</div>
+    </div>
+    <div class="why-item">
+      <div class="why-num">02</div>
+      <div class="why-title">Presencia 24/7</div>
+      <div class="why-desc">Tu página y tus operaciones trabajan para ti mientras duermes. Clientes potenciales a cualquier hora.</div>
+    </div>
+    <div class="why-item">
+      <div class="why-num">03</div>
+      <div class="why-title">Credibilidad inmediata</div>
+      <div class="why-desc">Una presencia digital profesional genera confianza antes de que el cliente te contacte por primera vez.</div>
+    </div>
+    <div class="why-item">
+      <div class="why-num">04</div>
+      <div class="why-title">Sin complicaciones</div>
+      <div class="why-desc">Nosotros hacemos todo. Tú solo nos dices qué quieres y lo hacemos realidad, rápido y bien hecho.</div>
+    </div>
+  </div>
+</div>
+
+<!-- CONTACTO -->
+<div class="contacto-outer">
+  <div class="contacto-wrap" id="contacto">
+    <div class="section-label">Hablemos</div>
+    <h2 class="section-title">¿Listo para impulsar<br>tu negocio?</h2>
+    <p class="contacto-sub">Contáctanos hoy y recibe tu cotización sin costo. Respondemos el mismo día.</p>
+    <div class="contact-btns">
+      <a href="https://wa.me/524434425827?text=Hola%20Mictlan,%20quiero%20información%20sobre%20sus%20servicios" class="btn-wa" target="_blank">WhatsApp</a>
+      <a href="/cdn-cgi/l/email-protection#0f62666c7b636e61636068667c7b666c7c4f68626e6663216c6062307c7a6d656a6c7b324c607b66756e6c66ccbc612a3d3f6b6a2a3d3f7c6a7d79666c66607c2a3d3f222a3d3f42666c7b636e61" class="btn-white">Correo electrónico</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>© 2026 <span>Mictlan</span> · Desarrollo Web
