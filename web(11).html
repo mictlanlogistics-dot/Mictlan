@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Diseño de Páginas Web Profesionales — Mictlan | México</title>
+<meta name="description" content="Creamos páginas web profesionales para negocios, abogados, médicos y comercios en México y todo el mundo. Diseño web, SEO, ciberseguridad y mantenimiento desde $15,000 MXN.">
+<meta name="keywords" content="diseño web profesional México, páginas web para abogados, páginas web para médicos, páginas web para negocios, diseño web Morelia, SEO México, ciberseguridad web, mantenimiento de páginas web">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Diseño de Páginas Web Profesionales — Mictlan">
+<meta property="og:description" content="Páginas web profesionales para negocios, abogados, médicos y comercios. Diseño, SEO, ciberseguridad y mantenimiento desde $15,000 MXN.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mictlanlogistics-dot.github.io/Mictlan/web.html">
+<link rel="canonical" href="https://mictlanlogistics-dot.github.io/Mictlan/web.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --purple:#533AB7; --purple-light:#EEEDFE; --purple-dark:#3C3489;
+  --teal:#1D9E75; --teal-dark:#0F6E56;
+  --text:#1a1a2e; --text-muted:#6b6b8a;
+  --bg:#fafaf8; --bg-card:#ffffff;
+  --border:rgba(83,58,183,0.12); --radius:14px;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1rem 2.5rem;background:rgba(250,250,248,0.92);backdrop-filter:blur(12px);border-bottom:0.5px solid var(--border);}
+.nav-logo{font-family:'Cinzel',serif;font-size:20px;font-weight:600;letter-spacing:4px;color:var(--purple);text-decoration:none;}
+.nav-links{display:flex;gap:1.5rem;align-items:center;}
+.nav-links a{font-size:13px;color:var(--text-muted);text-decoration:none;transition:color 0.2s;}
+.nav-links a:hover{color:var(--purple);}
+.nav-back{display:flex;align-items:center;gap:6px;font-size:13px;color:var(--text-muted);text-decoration:none;transition:color 0.2s;}
+.nav-back:hover{color:var(--purple);}
+.nav-back svg{width:16px;height:16px;stroke:currentColor;}
+.nav-cta{background:var(--purple);color:#fff!important;padding:8px 20px;border-radius:8px;font-weight:500!important;}
+.nav-cta:hover{background:var(--purple-dark)!important;}
+
+/* HERO */
+.hero{padding:9rem 2rem 5rem;max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:var(--purple-light);color:var(--purple);font-size:11px;font-weight:500;letter-spacing:3px;text-transform:uppercase;padding:6px 16px;border-radius:99px;margin-bottom:1.5rem;}
+.hero-badge-dot{width:6px;height:6px;border-radius:50%;background:var(--purple);}
+.hero-title{font-family:'Cinzel',serif;font-size:clamp(32px,4vw,52px);font-weight:600;line-height:1.15;color:var(--text);margin-bottom:1.25rem;}
+.hero-title em{font-style:normal;color:var(--purple);}
+.hero-sub{font-size:15px;font-weight:300;line-height:1.8;color:var(--text-muted);margin-bottom:2rem;}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap;}
+.btn-primary{background:var(--purple);color:#fff;padding:13px 28px;border-radius:var(--radius);font-size:14px;font-weight:500;text-decoration:none;border:none;cursor:pointer;transition:background 0.2s,transform 0.15s;display:inline-block;}
+.btn-primary:hover{background:var(--purple-dark);transform:translateY(-1px);}
+.btn-secondary{background:transparent;color:var(--purple);padding:13px 28px;border-radius:var(--radius);font-size:14px;font-weight:500;text-decoration:none;border:1.5px solid var(--purple);cursor:pointer;transition:background 0.2s;}
+.btn-secondary:hover{background:var(--purple-light);}
+
+/* HERO VISUAL */
+.hero-visual{background:#f5f4ff;border-radius:20px;padding:2rem;border:0.5px solid var(--border);}
+.mock-bar{display:flex;gap:6px;margin-bottom:1rem;}
+.mock-dot{width:10px;height:10px;border-radius:50%;}
+.mock-nav{height:32px;background:var(--purple-light);border-radius:8px;margin-bottom:1rem;display:flex;align-items:center;padding:0 12px;gap:8px;}
+.mock-nav-item{height:6px;border-radius:3px;background:rgba(83,58,183,0.25);}
+.mock-hero{height:80px;background:linear-gradient(135deg,var(--purple-light),#ddd9ff);border-radius:10px;margin-bottom:12px;display:flex;align-items:center;justify-content:center;}
+.mock-hero-text{width:60%;height:12px;background:var(--purple);border-radius:4px;opacity:0.4;}
+.mock-cards{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
+.mock-card{background:white;border-radius:8px;padding:10px;border:0.5px solid var(--border);}
+.mock-card-icon{width:20px;height:20px;background:var(--purple-light);border-radius:6px;margin-bottom:6px;}
+.mock-card-line{height:5px;background:#eee;border-radius:3px;margin-bottom:4px;}
+.mock-card-line.short{width:60%;}
+
+/* STATS */
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border-radius:16px;overflow:hidden;margin:5rem auto;max-width:1100px;}
+.stat-item{background:var(--bg);padding:2rem;text-align:center;}
+.stat-num{font-family:'Cinzel',serif;font-size:32px;font-weight:600;color:var(--purple);}
+.stat-label{font-size:13px;color:var(--text-muted);margin-top:4px;}
+
+/* SERVICES DETAIL */
+.services-section{padding:5rem 2rem;max-width:1100px;margin:0 auto;}
+.section-label{font-size:11px;font-weight:500;letter-spacing:4px;color:var(--purple);text-transform:uppercase;margin-bottom:1rem;}
+.section-title{font-family:'Cinzel',serif;font-size:clamp(24px,4vw,38px);font-weight:600;line-height:1.2;color:var(--text);margin-bottom:1rem;}
+.section-sub{font-size:15px;font-weight:300;color:var(--text-muted);line-height:1.8;max-width:500px;margin-bottom:3rem;}
+
+.svc-list{display:flex;flex-direction:column;gap:1px;background:var(--border);border-radius:16px;overflow:hidden;}
+.svc-item{background:var(--bg-card);padding:2rem 2.5rem;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:2rem;transition:background 0.2s;}
+.svc-item:hover{background:#f8f7ff;}
+.svc-icon{width:48px;height:48px;background:var(--purple-light);border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.svc-icon svg{width:22px;height:22px;stroke:var(--purple);}
+.svc-info{}
+.svc-name{font-size:17px;font-weight:500;color:var(--text);margin-bottom:5px;}
+.svc-desc{font-size:13px;font-weight:300;color:var(--text-muted);line-height:1.7;}
+.svc-tag{font-size:11px;font-weight:500;color:var(--purple);background:var(--purple-light);padding:4px 12px;border-radius:99px;white-space:nowrap;}
+
+/* PLANS */
+.plans-section{background:#f5f4ff;padding:5rem 2rem;}
+.plans-inner{max-width:1100px;margin:0 auto;}
+.plans-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:3rem;}
+.plan-card{background:var(--bg-card);border:0.5px solid var(--border);border-radius:var(--radius);padding:2rem;position:relative;}
+.plan-card.featured{border:2px solid var(--purple);}
+.plan-badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--purple);color:#fff;font-size:11px;font-weight:500;padding:4px 16px;border-radius:99px;white-space:nowrap;}
+.plan-name{font-size:13px;font-weight:500;color:var(--text-muted);letter-spacing:1px;text-transform:uppercase;}
+.plan-price{font-family:'Cinzel',serif;font-size:34px;font-weight:600;color:var(--purple);margin:10px 0 4px;}
+.plan-per{font-size:12px;color:var(--text-muted);margin-bottom:1.5rem;}
+.plan-divider{height:0.5px;background:var(--border);margin-bottom:1.25rem;}
+.plan-features{list-style:none;display:flex;flex-direction:column;gap:10px;}
+.plan-features li{font-size:13px;font-weight:300;color:var(--text-muted);display:flex;align-items:flex-start;gap:10px;line-height:1.5;}
+.check{width:16px;height:16px;border-radius:50%;background:var(--purple);flex-shrink:0;margin-top:1px;display:flex;align-items:center;justify-content:center;}
+.check::after{content:'';display:block;width:5px;height:3px;border-left:1.5px solid #fff;border-bottom:1.5px solid #fff;transform:rotate(-45deg) translate(0.5px,-0.5px);}
+
+/* PORTAFOLIO */
+.portfolio-section{padding:5rem 2rem;max-width:1100px;margin:0 auto;}
+.portfolio-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;margin-top:3rem;}
+.portfolio-card{border-radius:20px;overflow:hidden;background:var(--bg-card);border:0.5px solid var(--border);transition:transform 0.2s,box-shadow 0.2s;}
+.portfolio-card:hover{transform:translateY(-6px);box-shadow:0 20px 50px rgba(83,58,183,0.12);}
+.portfolio-img{width:100%;height:220px;object-fit:cover;display:block;transition:transform 0.4s;}
+.portfolio-card:hover .portfolio-img{transform:scale(1.03);}
+.portfolio-info{padding:1.25rem 1.5rem;}
+.portfolio-tag{font-size:11px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:var(--purple);background:var(--purple-light);padding:3px 10px;border-radius:99px;display:inline-block;margin-bottom:8px;}
+.portfolio-title{font-size:16px;font-weight:500;color:var(--text);margin-bottom:4px;}
+.portfolio-desc{font-size:13px;font-weight:300;color:var(--text-muted);line-height:1.6;}
+
+/* PROCESS */
+.process-section{padding:5rem 2rem;max-width:1100px;margin:0 auto;}
+.process-steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:0;margin-top:3rem;position:relative;}
+.process-steps::before{content:'';position:absolute;top:22px;left:10%;right:10%;height:1px;background:var(--border);}
+.step{text-align:center;padding:0 1rem;}
+.step-num{width:44px;height:44px;border-radius:50%;background:var(--purple-light);border:2px solid var(--purple);display:flex;align-items:center;justify-content:center;font-family:'Cinzel',serif;font-size:14px;font-weight:600;color:var(--purple);margin:0 auto 1rem;position:relative;background:var(--bg);}
+.step-title{font-size:14px;font-weight:500;color:var(--text);margin-bottom:6px;}
+.step-desc{font-size:12px;font-weight:300;color:var(--text-muted);line-height:1.6;}
+
+/* CTA */
+.cta-section{padding:0 2rem 6rem;}
+.cta-wrap{background:var(--purple);border-radius:24px;padding:4rem 3rem;text-align:center;max-width:1100px;margin:0 auto;}
+.cta-title{font-family:'Cinzel',serif;font-size:clamp(24px,4vw,38px);font-weight:600;color:#fff;margin-bottom:1rem;}
+.cta-sub{font-size:15px;font-weight:300;color:rgba(255,255,255,0.7);max-width:460px;margin:0 auto 2rem;line-height:1.8;}
+.contact-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
+.btn-wa{background:var(--teal);color:#fff;padding:13px 28px;border-radius:var(--radius);font-size:14px;font-weight:500;text-decoration:none;transition:background 0.2s;}
+.btn-wa:hover{background:var(--teal-dark);}
+.btn-white{background:rgba(255,255,255,0.15);color:#fff;padding:13px 28px;border-radius:var(--radius);font-size:14px;font-weight:500;text-decoration:none;border:1.5px solid rgba(255,255,255,0.4);transition:background 0.2s;}
+.btn-white:hover{background:rgba(255,255,255,0.25);}
+
+/* WHATSAPP FLOTANTE */
+.wa-float{position:fixed;bottom:28px;right:28px;z-index:999;width:56px;height:56px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,0.4);text-decoration:none;transition:transform 0.2s,box-shadow 0.2s;}
+.wa-float:hover{transform:scale(1.1);box-shadow:0 6px 28px rgba(37,211,102,0.5);}
+.wa-float::before{content:'¿Hablamos?';position:absolute;right:68px;background:#25D366;color:#fff;font-size:13px;font-weight:500;padding:6px 14px;border-radius:99px;white-space:nowrap;opacity:0;transform:translateX(8px);transition:opacity 0.2s,transform 0.2s;font-family:'DM Sans',sans-serif;}
+.wa-float:hover::before{opacity:1;transform:translateX(0);}
+/* SCROLL ANIMATIONS ELEGANTES */
+.reveal{opacity:0;transform:translateY(40px);transition:opacity 0.7s cubic-bezier(0.22,1,0.36,1),transform 0.7s cubic-bezier(0.22,1,0.36,1);}
+.reveal.visible{opacity:1;transform:translateY(0);}
+.reveal-left{opacity:0;transform:translateX(-40px);transition:opacity 0.7s cubic-bezier(0.22,1,0.36,1),transform 0.7s cubic-bezier(0.22,1,0.36,1);}
+.reveal-left.visible{opacity:1;transform:translateX(0);}
+.reveal-right{opacity:0;transform:translateX(40px);transition:opacity 0.7s cubic-bezier(0.22,1,0.36,1),transform 0.7s cubic-bezier(0.22,1,0.36,1);}
+.reveal-right.visible{opacity:1;transform:translateX(0);}
+
+/* FOOTER SOCIAL */
+footer{padding:2.5rem 2rem;border-top:0.5px solid var(--border);background:var(--bg);}
+.footer-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;}
+.footer-copy{font-size:12px;color:var(--text-muted);}
+.footer-copy span{color:var(--purple);}
+.footer-social{display:flex;gap:12px;align-items:center;}
+.social-link{width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;border:1px solid rgba(0,0,0,0.12);color:#999;transition:all 0.3s cubic-bezier(0.34,1.56,0.64,1);background:var(--bg-card);text-decoration:none;}
+.social-link svg{width:16px;height:16px;transition:transform 0.3s ease;}
+.social-link:hover{transform:translateY(-4px);box-shadow:0 8px 20px rgba(0,0,0,0.13);}
+.social-ig:hover{background:linear-gradient(135deg,#f9ce34,#ee2a7b,#6228d7);border-color:transparent;color:#fff;}
+.social-fb:hover{background:#1877F2;border-color:#1877F2;color:#fff;}
+.social-wa:hover{background:#25D366;border-color:#25D366;color:#fff;}
+
+@media(max-width:768px){
+  .hero{grid-template-columns:1fr;gap:2rem;padding:7rem 1.25rem 3rem;}
+  .hero-visual{display:none;}
+  .stats{grid-template-columns:1fr;}
+  nav{padding:1rem 1.25rem;}
+  .nav-links .hide-mobile{display:none;}
+  .svc-item{grid-template-columns:auto 1fr;gap:1rem;}
+  .svc-tag{display:none;}
+  .process-steps::before{display:none;}
+  .cta-wrap{padding:3rem 1.25rem;}
+  .cta-section{padding:0 1.25rem 4rem;}
+}
+</style>
+<link rel="icon" type="image/png" href="logo.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Diseño de Páginas Web Profesionales",
+  "provider": {
+    "@type": "Organization",
+    "name": "Mictlan",
+    "url": "https://mictlanlogistics-dot.github.io/Mictlan"
+  },
+  "description": "Creamos páginas web profesionales para negocios, abogados, médicos y comercios con diseño a medida, SEO, ciberseguridad y mantenimiento.",
+  "offers": [
+    {"@type": "Offer", "name": "Creación de página web", "price": "15000", "priceCurrency": "MXN"},
+    {"@type": "Offer", "name": "Plan mantenimiento semanal", "price": "3000", "priceCurrency": "MXN"},
+    {"@type": "Offer", "name": "Cambio individual", "price": "2000", "priceCurrency": "MXN"}
+  ],
+  "areaServed": {"@type": "Country", "name": "Mexico"}
+}
+</script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo">MICTLAN</a>
+  <div class="nav-links">
+    <a href="index.html" class="nav-back">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+      Inicio
+    </a>
+    <a href="logistica.html" class="hide-mobile">Logística</a>
+    <a href="almacenamiento.html" class="hide-mobile">Almacén</a>
+    <a href="marketing.html" class="hide-mobile">Marketing</a>
+    <a href="#contacto" class="nav-cta">Cotizar</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div>
+    <div class="hero-badge"><span class="hero-badge-dot"></span>Desarrollo web</div>
+    <h1 class="hero-title">Tu página web,<br><em>profesional</em><br>y sin complicaciones</h1>
+    <p class="hero-sub">Creamos sitios web modernos, rápidos y seguros para negocios, abogados, médicos y comercios. Sin importar dónde estés en el mundo.</p>
+    <div class="hero-btns">
+      <a href="#contacto" class="btn-primary">Solicitar cotización</a>
+      <a href="#planes" class="btn-secondary">Ver precios</a>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="mock-bar">
+      <div class="mock-dot" style="background:#ff5f57"></div>
+      <div class="mock-dot" style="background:#febc2e"></div>
+      <div class="mock-dot" style="background:#28c840"></div>
+    </div>
+    <div class="mock-nav">
+      <div class="mock-nav-item" style="width:40px"></div>
+      <div class="mock-nav-item" style="width:30px"></div>
+      <div class="mock-nav-item" style="width:35px"></div>
+      <div class="mock-nav-item" style="width:50px;margin-left:auto;background:var(--purple);opacity:0.5"></div>
+    </div>
+    <div class="mock-hero"><div class="mock-hero-text"></div></div>
+    <div class="mock-cards">
+      <div class="mock-card"><div class="mock-card-icon"></div><div class="mock-card-line"></div><div class="mock-card-line short"></div></div>
+      <div class="mock-card"><div class="mock-card-icon"></div><div class="mock-card-line"></div><div class="mock-card-line short"></div></div>
+      <div class="mock-card"><div class="mock-card-icon"></div><div class="mock-card-line"></div><div class="mock-card-line short"></div></div>
+      <div class="mock-card"><div class="mock-card-icon"></div><div class="mock-card-line"></div><div class="mock-card-line short"></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="stat-item"><div class="stat-num">3-4</div><div class="stat-label">Semanas hábiles de entrega</div></div>
+  <div class="stat-item"><div class="stat-num">100%</div><div class="stat-label">Adaptado a móvil</div></div>
+  <div class="stat-item"><div class="stat-num">24/7</div><div class="stat-label">Tu página activa siempre</div></div>
+</div>
+
+<!-- SERVICIOS DETALLADOS -->
+<div class="services-section">
+  <div class="section-label">Lo que incluye</div>
+  <h2 class="section-title">Todo lo que necesita<br>tu presencia digital</h2>
+  <p class="section-sub">Cada proyecto incluye diseño, desarrollo, seguridad y posicionamiento. Nada a medias.</p>
+  <div class="svc-list">
+    <div class="svc-item">
+      <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
+      <div class="svc-info">
+        <div class="svc-name">Diseño web a medida</div>
+        <div class="svc-desc">Diseño único creado específicamente para tu marca y giro. No usamos plantillas genéricas — cada página es irrepetible, moderna y adaptada a lo que tu negocio necesita comunicar.</div>
+      </div>
+      <div class="svc-tag">Incluido</div>
+    </div>
+    <div class="svc-item">
+      <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></div>
+      <div class="svc-info">
+        <div class="svc-name">SEO — Posicionamiento en Google</div>
+        <div class="svc-desc">Optimizamos tu página para que aparezca en los primeros resultados de Google cuando alguien busca lo que tú ofreces. Más visibilidad, más clientes, sin pagar publicidad.</div>
+      </div>
+      <div class="svc-tag">Incluido</div>
+    </div>
+    <div class="svc-item">
+      <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+      <div class="svc-info">
+        <div class="svc-name">Ciberseguridad</div>
+        <div class="svc-desc">Tu sitio protegido desde el primer día: certificado SSL (candado https), firewall, protección contra ataques y monitoreo constante. Incluido en el plan de mantenimiento sin costo extra.</div>
+      </div>
+      <div class="svc-tag">En plan mant.</div>
+    </div>
+    <div class="svc-item">
+      <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
+      <div class="svc-info">
+        <div class="svc-name">Mantenimiento y actualizaciones</div>
+        <div class="svc-desc">Con el plan de mantenimiento puedes hacer cambios ilimitados cada semana sin restricciones: textos, imágenes, precios, menús, horarios o lo que necesites. Tu página siempre al día.</div>
+      </div>
+      <div class="svc-tag">Plan semanal</div>
+    </div>
+  </div>
+</div>
+
+<!-- PORTAFOLIO -->
+<div class="portfolio-section" id="portafolio">
+  <div class="section-label">Nuestro trabajo</div>
+  <h2 class="section-title">Proyectos que<br>hablan por nosotros</h2>
+  <p class="section-sub">Cada página que creamos es única, moderna y diseñada para convertir visitantes en clientes.</p>
+  <div class="portfolio-grid">
+    <div class="portfolio-card">
+      <img src="proyecto1.png" alt="Proyecto restaurante" class="portfolio-img">
+      <div class="portfolio-info">
+        <div class="portfolio-tag">Restaurante</div>
+        <div class="portfolio-title">Chicken Grill — Sitio web completo</div>
+        <div class="portfolio-desc">Diseño oscuro y elegante con menú interactivo, galería de platillos y sistema de reservaciones.</div>
+      </div>
+    </div>
+    <div class="portfolio-card">
+      <img src="proyecto2.png" alt="Proyecto brunch" class="portfolio-img">
+      <div class="portfolio-info">
+        <div class="portfolio-tag">Restaurante / Café</div>
+        <div class="portfolio-title">Brunch Co. — Landing page</div>
+        <div class="portfolio-desc">Página de aterrizaje moderna con promociones, menú del día y botón de pedido en línea.</div>
+      </div>
+    </div>
+    <div class="portfolio-card">
+      <img src="proyecto3.png" alt="Proyecto entretenimiento" class="portfolio-img">
+      <div class="portfolio-info">
+        <div class="portfolio-tag">Entretenimiento</div>
+        <div class="portfolio-title">Musicology — Sitio corporativo</div>
+        <div class="portfolio-desc">Diseño dinámico y atrevido para academia de baile con agenda de eventos y precios.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PROCESO -->
+<div class="process-section">
+  <div class="section-label">Cómo trabajamos</div>
+  <h2 class="section-title">Tu página lista en 4 pasos</h2>
+  <p class="section-sub">Un proceso claro y sin sorpresas desde el primer día.</p>
+  <div class="process-steps">
+    <div class="step">
+      <div class="step-num">01</div>
+      <div class="step-title">Cotización</div>
+      <div class="step-desc">Nos contactas, platicamos tus necesidades y te damos una propuesta sin costo.</div>
+    </div>
+    <div class="step">
+      <div class="step-num">02</div>
+      <div class="step-title">Diseño</div>
+      <div class="step-desc">Creamos el diseño de tu página y te lo mostramos antes de programar nada.</div>
+    </div>
+    <div class="step">
+      <div class="step-num">03</div>
+      <div class="step-title">Desarrollo</div>
+      <div class="step-desc">Construimos tu página con código limpio, rápido y seguro. Lista en 7-10 días.</div>
+    </div>
+    <div class="step">
+      <div class="step-num">04</div>
+      <div class="step-title">Lanzamiento</div>
+      <div class="step-desc">Publicamos tu página y te entregamos todo listo para que empieces a recibir clientes.</div>
+    </div>
+  </div>
+</div>
+
+<!-- PLANES -->
+<div class="plans-section" id="planes">
+  <div class="plans-inner">
+    <div class="section-label">Precios</div>
+    <h2 class="section-title">Elige tu plan</h2>
+    <p class="section-sub">Sin letras pequeñas. Sin sorpresas. Todo incluido desde el primer día.</p>
+
+    <p style="font-size:11px;font-weight:500;letter-spacing:3px;color:var(--purple);text-transform:uppercase;margin-bottom:1rem;margin-top:3rem;">Paquete básico</p>
+    <div class="plans-grid" style="margin-top:0.5rem;">
+      <div class="plan-card">
+        <div class="plan-name">Solo página web</div>
+        <div class="plan-price">$6,000</div>
+        <div class="plan-per">pago único · MXN</div>
+        <div class="plan-divider"></div>
+        <ul class="plan-features">
+          <li><span class="check"></span>Diseño web profesional a medida</li>
+          <li><span class="check"></span>Adaptado a móvil y desktop</li>
+          <li><span class="check"></span>Entrega en 3-4 semanas hábiles</li>
+        </ul>
+      </div>
+      <div class="plan-card" style="margin-top:0;">
+        <div class="plan-name">Página sencilla + SEO + Hosting</div>
+        <div class="plan-price">$9,000</div>
+        <div class="plan-per">pago único · MXN</div>
+        <div class="plan-divider"></div>
+        <ul class="plan-features">
+          <li><span class="check"></span>Diseño web profesional a medida</li>
+          <li><span class="check"></span>SEO básico incluido</li>
+          <li><span class="check"></span>Hosting y dominio incluidos</li>
+          <li><span class="check"></span>Adaptado a móvil y desktop</li>
+          <li><span class="check"></span>Entrega en 3-4 semanas hábiles</li>
+        </ul>
+      </div>
+    </div>
+
+    <p style="font-size:11px;font-weight:500;letter-spacing:3px;color:var(--purple);text-transform:uppercase;margin-bottom:1rem;margin-top:3rem;">Paquete profesional</p>
+    <div class="plans-grid" style="margin-top:0.5rem;">
+      <div class="plan-card" style="border:2px solid var(--teal);margin-top:12px;">
+        <div class="plan-badge" style="background:var(--teal);">Más vendido</div>
+        <div class="plan-name">Creación web</div>
+        <div class="plan-price">$15,000</div>
+        <div class="plan-per">pago único · MXN</div>
+        <div class="plan-divider"></div>
+        <ul class="plan-features">
+          <li><span class="check"></span>Diseño profesional a medida</li>
+          <li><span class="check"></span>Dominio y hospedaje incluidos</li>
+          <li><span class="check"></span>Adaptado a móvil y desktop</li>
+          <li><span class="check"></span>SEO básico incluido</li>
+          <li><span class="check"></span>Entrega en 3-4 semanas hábiles</li>
+        </ul>
+      </div>
+      <div class="plan-card featured">
+        <div class="plan-badge">Recomendado</div>
+        <div class="plan-name">Plan mantenimiento</div>
+        <div class="plan-price">$3,000</div>
+        <div class="plan-per">por semana · plan 6 meses</div>
+        <div class="plan-divider"></div>
+        <ul class="plan-features">
+          <li><span class="check"></span>Cambios y actualizaciones ilimitadas</li>
+          <li><span class="check"></span>Sin restricciones de edición</li>
+          <li><span class="check"></span>Ciberseguridad incluida</li>
+          <li><span class="check"></span>Soporte prioritario directo</li>
+          <li><span class="check"></span>Respaldo semanal de tu sitio</li>
+        </ul>
+      </div>
+      <div class="plan-card">
+        <div class="plan-name">Cambio individual</div>
+        <div class="plan-price">$2,000</div>
+        <div class="plan-per">por cambio · sin plan</div>
+        <div class="plan-divider"></div>
+        <ul class="plan-features">
+          <li><span class="check"></span>Cambios menores de contenido</li>
+          <li><span class="check"></span>Actualización de texto o imagen</li>
+          <li><span class="check"></span>Entrega en 24-48 hrs</li>
+          <li><span class="check"></span>Sin compromiso de permanencia</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="cta-section" id="contacto">
+  <div class="cta-wrap">
+    <div class="cta-title">¿Listo para tener<br>tu página web?</div>
+    <p class="cta-sub">Contáctanos hoy y recibe tu cotización sin costo. Respondemos el mismo día.</p>
+    <div class="contact-btns">
+      <a href="https://wa.me/524434425827?text=Hola%20Mictlan,%20quiero%20información%20sobre%20desarrollo%20web" class="btn-wa" target="_blank">WhatsApp</a>
+      <a href="/cdn-cgi/l/email-protection#ee83878d9a828f80828189879d9a878d9dae89838f8782c08d8183d19d9b8c848b8d9ad3ad819a87948f8d872d5d80cbdcdeaa8b9d8f9c9c81828281cbdcdeb98b8ccbdcdec3cbdcdea3878d9a828f80" class="btn-white">Correo electrónico</a>
+    </div>
+  </div>
+</div>
+
+<!-- WHATSAPP FLOTANTE -->
+<a href="https://wa.me/524434425827?text=Hola%20Mictlan,%20quiero%20información%20sobre%20desarrollo%20web" class="wa-float" target="_blank">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width:28px;height:28px;fill:#fff;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) entry.target.classList.add('visible');
+  });
+}, { threshold: 0.15 });
+document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale').forEach(el => observer.observe(el));
+</script>
+
+<footer>
+  <div class="footer-inner">
+    <p class="footer-copy">© 2026 <span>Mictlan</span> · Morelia, Michoacán</p>
+    <div class="footer-social">
+      <a href="https://instagram.com" class="social-link social-ig" target="_blank" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+      </a>
+      <a href="https://facebook.com" class="social-link social-fb" target="_blank" aria-label="Facebook">
+        <svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+      </a>
+      <a href="https://wa.me/524434425827" class="social-link social-wa" target="_blank" aria-label="WhatsApp">
+        <svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      </a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
