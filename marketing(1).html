@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Marketing Digital — Mictlan | México</title>
+<meta name="description" content="Gestión de redes sociales, diseño de contenido y estrategia de marca para hacer crecer tu negocio en toda la República Mexicana.">
+<meta name="keywords" content="marketing digital México, gestión redes sociales, diseño de contenido, estrategia de marca, marketing Morelia">
+<meta name="robots" content="index, follow">
+<link rel="icon" type="image/png" href="logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --coral:#D85A30; --coral-light:#FAECE7; --coral-dark:#993C1D;
+  --purple:#533AB7; --purple-light:#EEEDFE; --purple-dark:#3C3489;
+  --teal:#1D9E75; --teal-dark:#0F6E56;
+  --text:#1a1a2e; --text-muted:#6b6b8a;
+  --bg:#fafaf8; --bg-card:#ffffff;
+  --border:rgba(216,90,48,0.12); --radius:14px;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1rem 2.5rem;background:rgba(250,250,248,0.92);backdrop-filter:blur(12px);border-bottom:0.5px solid rgba(216,90,48,0.1);}
+.nav-logo{font-family:'Cinzel',serif;font-size:20px;font-weight:600;letter-spacing:4px;color:var(--purple);text-decoration:none;}
+.nav-links{display:flex;gap:1.5rem;align-items:center;}
+.nav-links a{font-size:13px;color:var(--text-muted);text-decoration:none;transition:color 0.2s;}
+.nav-links a:hover{color:var(--coral);}
+.nav-back{display:flex;align-items:center;gap:6px;font-size:13px;color:var(--text-muted);text-decoration:none;transition:color 0.2s;}
+.nav-back:hover{color:var(--coral);}
+.nav-back svg{width:16px;height:16px;stroke:currentColor;fill:none;}
+.nav-cta{background:var(--coral);color:#fff!important;padding:8px 20px;border-radius:8px;font-weight:500!important;}
+.nav-cta:hover{background:var(--coral-dark)!important;}
+
+/* HERO */
+.hero{padding:9rem 2rem 5rem;max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:var(--coral-light);color:var(--coral);font-size:11px;font-weight:500;letter-spacing:3px;text-transform:uppercase;padding:6px 16px;border-radius:99px;margin-bottom:1.5rem;}
+.hero-badge-dot{width:6px;height:6px;border-radius:50%;background:var(--coral);}
+.hero-title{font-family:'Cinzel',serif;font-size:clamp(32px,4vw,52px);font-weight:600;line-height:1.15;color:var(--text);margin-bottom:1.25rem;}
+.hero-title em{font-style:normal;color:var(--coral);}
+.hero-sub{font-size:15px;font-weight:300;line-height:1.8;color:var(--text-muted);margin-bottom:2rem;}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap;}
+.btn-primary{background:var(--coral);color:#fff;padding:13px 28px;border-radius:var(--radius);font-size:14px;font-weight:500;text-decoration:none;border:none;cursor:pointer;transition:background 0.2s,transform 0.15s;display:inline-block;}
+.btn-primary:hover{background:var(--coral-dark);transform:translateY(-1px);}
+.btn-secondary{background:transparent;color:var(--coral);padding:13px 28px;border-radius:var(--radius);font-size:14px;font-weight:500;text-decoration:none;border:1.5px solid var(--coral);cursor:pointer;transition:background 0.2s;}
+.btn-secondary:hover{background:var(--coral-light);}
+
+/* HERO VISUAL */
+.hero-visual{background:var(--coral-light);border-radius:20px;padding:2rem;border:0.5px solid rgba(216,90,48,0.15);}
+.mock-post{background:#fff;border-radius:12px;padding:1rem;margin-bottom:10px;border:0.5px solid rgba(216,90,48,0.1);}
+.mock-post-header{display:flex;align-items:center;gap:8px;margin-bottom:10px;}
+.mock-avatar{width:28px;height:28px;border-radius:50%;background:var(--coral);opacity:0.5;}
+.mock-name{height:8px;background:#eee;border-radius:4px;width:80px;}
+.mock-img{height:80px;background:linear-gradient(135deg,var(--coral-light),#fce4d6);border-radius:8px;margin-bottom:8px;}
+.mock-line{height:6px;background:#eee;border-radius:3px;margin-bottom:4px;}
+.mock-line.short{width:60%;}
+.mock-actions{display:flex;gap:8px;margin-top:8px;}
+.mock-action{height:20px;width:50px;background:var(--coral-light);border-radius:4px;opacity:0.6;}
+
+/* STATS */
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(216,90,48,0.1);border-radius:16px;overflow:hidden;margin:0 auto 5rem;max-width:1100px;}
+.stat-item{background:var(--bg);padding:2rem;text-align:center;}
+.stat-num{font-family:'Cinzel',serif;font-size:32px;font-weight:600;color:var(--coral);}
+.stat-label{font-size:13px;color:var(--text-muted);margin-top:4px;}
+
+/* SERVICES */
+.services-section{padding:5rem 2rem;max-width:1100px;margin:0 auto;}
+.section-label{font-size:11px;font-weight:500;letter-spacing:4px;color:var(--coral);text-transform:uppercase;margin-bottom:1rem;}
+.section-title{font-family:'Cinzel',serif;font-size:clamp(24px,4vw,38px);font-weight:600;line-height:1.2;color:var(--text);margin-bottom:1rem;}
+.section-sub{font-size:15px;font-weight:300;color:var(--text-muted);line-height:1.8;max-width:500px;margin-bottom:3rem;}
+.svc-list{display:flex;flex-direction:column;gap:1px;background:rgba(216,90,48,0.08);border-radius:16px;overflow:hidden;}
+.svc-item{background:var(--bg-card);padding:2rem 2.5rem;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:2rem;transition:background 0.2s;}
+.svc-item:hover{background:#fdf4f1;}
+.svc-icon{width:48px;height:48px;background:var(--coral-light);border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.svc-icon svg{width:22px;height:22px;stroke:var(--coral);fill:none;}
+.svc-name{font-size:17px;font-weight:500;color:var(--text);margin-bottom:5px;}
+.svc-desc{font-size:13px;font-weight:300;color:var(--text-muted);line-height:1.7;}
+.svc-tag{font-size:11px;font-weight:500;color:var(--coral);background:var(--coral-light);padding:4px 12px;border-radius:99px;white-space:nowrap;}
+
+/* PLANS */
+.plans-section{background:#fdf4f1;padding:5rem 2rem;}
+.plans-inner{max-width:1100px;margin:0 auto;}
+.plans-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:1rem;}
+.plan-card{background:var(--bg-card);border:0.5px solid rgba(216,90,48,0.15);border-radius:var(--radius);padding:2rem;position:relative;}
+.plan-card.featured{border:2px solid var(--coral);}
+.plan-badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--coral);color:#fff;font-size:11px;font-weight:500;padding:4px 16px;border-radius:99px;white-space:nowrap;}
+.plan-name{font-size:13px;font-weight:500;color:var(--text-muted);letter-spacing:1px;text-transform:uppercase;}
+.plan-price{font-family:'Cinzel',serif;font-size:32px;font-weight:600;color:var(--coral);margin:10px 0 4px;}
+.plan-per{font-size:12px;color:var(--text-muted);margin-bottom:1.5rem;}
+.plan-divider{height:0.5px;background:rgba(216,90,48,0.1);margin-bottom:1.25rem;}
+.plan-features{list-style:none;display:flex;flex-direction:column;gap:10px;}
+.plan-features li{font-size:13px;font-weight:300;color:var(--text-muted);display:flex;align-items:flex-start;gap:10px;line-height:1.5;}
+.check{width:16px;height:16px;border-radius:50%;background:var(--coral);flex-shrink:0;margin-top:1px;display:flex;align-items:center;justify-content:center;}
+.check::after{content:'';display:block;width:5px;height:3px;border-left:1.5px solid #fff;border-bottom:1.5px solid #fff;transform:rotate(-45deg) translate(0.5px,-0.5px);}
+
+/* CTA */
+.cta-section{padding:0 2rem 6rem;}
+.cta-wrap{background:var(--coral);border-radius:24px;padding:4rem 3rem;text-align:center;max-width:1100px;margin:0 auto;}
+.cta-title{font-family:'Cinzel',serif;font-size:clamp(24px,4vw,38px);font-weight:600;color:#fff;margin-bottom:1rem;}
+.cta-sub{font-size:15px;font-weight:300;color:rgba(255,255,255,0.8);max-width:460px;margin:0 auto 2rem;line-height:1.8;}
+.contact-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
+.btn-wa{background:var(--teal);color:#fff;padding:13px 28px;border-radius:var(--radius);font-size:14px;font-weight:500;text-decoration:none;transition:background 0.2s;}
+.btn-wa:hover{background:var(--teal-dark);}
+.btn-white{background:rgba(255,255,255,0.15);color:#fff;padding:13px 28px;border-radius:var(--radius);font-size:14px;font-weight:500;text-decoration:none;border:1.5px solid rgba(255,255,255,0.4);transition:background 0.2s;}
+.btn-white:hover{background:rgba(255,255,255,0.25);}
+
+/* SCROLL ANIMATIONS ELEGANTES */
+.reveal{opacity:0;transform:translateY(40px);transition:opacity 0.7s cubic-bezier(0.22,1,0.36,1),transform 0.7s cubic-bezier(0.22,1,0.36,1);}
+.reveal.visible{opacity:1;transform:translateY(0);}
+.reveal-left{opacity:0;transform:translateX(-40px);transition:opacity 0.7s cubic-bezier(0.22,1,0.36,1),transform 0.7s cubic-bezier(0.22,1,0.36,1);}
+.reveal-left.visible{opacity:1;transform:translateX(0);}
+.reveal-right{opacity:0;transform:translateX(40px);transition:opacity 0.7s cubic-bezier(0.22,1,0.36,1),transform 0.7s cubic-bezier(0.22,1,0.36,1);}
+.reveal-right.visible{opacity:1;transform:translateX(0);}
+
+/* FOOTER SOCIAL */
+footer{padding:2.5rem 2rem;border-top:0.5px solid rgba(216,90,48,0.1);background:var(--bg);}
+.footer-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;}
+.footer-copy{font-size:12px;color:var(--text-muted);}
+.footer-copy span{color:var(--coral);}
+.footer-social{display:flex;gap:12px;align-items:center;}
+.social-link{width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;border:1px solid rgba(0,0,0,0.12);color:#999;transition:all 0.3s cubic-bezier(0.34,1.56,0.64,1);background:var(--bg-card);text-decoration:none;}
+.social-link svg{width:16px;height:16px;transition:transform 0.3s ease;}
+.social-link:hover{transform:translateY(-4px);box-shadow:0 8px 20px rgba(0,0,0,0.13);}
+.social-ig:hover{background:linear-gradient(135deg,#f9ce34,#ee2a7b,#6228d7);border-color:transparent;color:#fff;}
+.social-fb:hover{background:#1877F2;border-color:#1877F2;color:#fff;}
+.social-wa:hover{background:#25D366;border-color:#25D366;color:#fff;}
+
+/* WA FLOAT */
+.wa-float{position:fixed;bottom:28px;right:28px;z-index:999;width:56px;height:56px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,0.4);text-decoration:none;transition:transform 0.2s,box-shadow 0.2s;}
+.wa-float:hover{transform:scale(1.1);}
+.wa-float::before{content:'¿Hablamos?';position:absolute;right:68px;background:#25D366;color:#fff;font-size:13px;font-weight:500;padding:6px 14px;border-radius:99px;white-space:nowrap;opacity:0;transform:translateX(8px);transition:opacity 0.2s,transform 0.2s;font-family:'DM Sans',sans-serif;}
+.wa-float:hover::before{opacity:1;transform:translateX(0);}
+
+@media(max-width:768px){
+  .hero{grid-template-columns:1fr;gap:2rem;padding:7rem 1.25rem 3rem;}
+  .hero-visual{display:none;}
+  .stats{grid-template-columns:1fr;}
+  nav{padding:1rem 1.25rem;}
+  .svc-item{grid-template-columns:auto 1fr;gap:1rem;}
+  .svc-tag{display:none;}
+  .cta-wrap{padding:3rem 1.25rem;}
+  .cta-section{padding:0 1.25rem 4rem;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo">MICTLAN</a>
+  <div class="nav-links">
+    <a href="index.html" class="nav-back">
+      <svg viewBox="0 0 24 24" stroke-width="2"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+      Inicio
+    </a>
+    <a href="web.html">Web</a>
+    <a href="proximamente.html">Logística</a>
+    <a href="proximamente.html">Almacén</a>
+    <a href="#contacto" class="nav-cta">Cotizar</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div>
+    <div class="hero-badge"><span class="hero-badge-dot"></span>Marketing digital</div>
+    <h1 class="hero-title">Conecta con más<br>clientes, crece<br>más <em>rápido</em></h1>
+    <p class="hero-sub">Gestionamos tus redes sociales, creamos contenido que engancha y construimos una marca que tu audiencia no olvida.</p>
+    <div class="hero-btns">
+      <a href="#contacto" class="btn-primary">Solicitar cotización</a>
+      <a href="#planes" class="btn-secondary">Ver precios</a>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="mock-post">
+      <div class="mock-post-header"><div class="mock-avatar"></div><div class="mock-name"></div></div>
+      <div class="mock-img"></div>
+      <div class="mock-line"></div>
+      <div class="mock-line short"></div>
+      <div class="mock-actions"><div class="mock-action"></div><div class="mock-action"></div></div>
+    </div>
+    <div class="mock-post">
+      <div class="mock-post-header"><div class="mock-avatar"></div><div class="mock-name"></div></div>
+      <div class="mock-img"></div>
+      <div class="mock-line"></div>
+      <div class="mock-line short"></div>
+    </div>
+  </div>
+</div>
+
+<!-- STATS -->
+<div class="stats reveal">
+  <div class="stat-item"><div class="stat-num">3</div><div class="stat-label">Servicios de marketing</div></div>
+  <div class="stat-item"><div class="stat-num">100%</div><div class="stat-label">Contenido original</div></div>
+  <div class="stat-item"><div class="stat-num">4</div><div class="stat-label">Paquetes disponibles</div></div>
+</div>
+
+<!-- SERVICIOS -->
+<div class="services-section reveal">
+  <div class="section-label">Lo que hacemos</div>
+  <h2 class="section-title">Marketing que<br>genera resultados</h2>
+  <p class="section-sub">Cada estrategia está diseñada para conectar tu marca con las personas correctas en el momento correcto.</p>
+  <div class="svc-list">
+    <div class="svc-item">
+      <div class="svc-icon"><svg viewBox="0 0 24 24" stroke-width="1.8"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></div>
+      <div>
+        <div class="svc-name">Gestión de redes sociales</div>
+        <div class="svc-desc">Administramos tus perfiles de Facebook, Instagram y TikTok con publicaciones constantes, respuesta a comentarios y crecimiento orgánico de seguidores.</div>
+      </div>
+      <div class="svc-tag">Mensual</div>
+    </div>
+    <div class="svc-item">
+      <div class="svc-icon"><svg viewBox="0 0 24 24" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
+      <div>
+        <div class="svc-name">Diseño de contenido</div>
+        <div class="svc-desc">Creamos posts, stories, banners y material visual con tu identidad de marca. Contenido que destaca, engancha y comunica exactamente lo que quieres decir.</div>
+      </div>
+      <div class="svc-tag">Incluido</div>
+    </div>
+    <div class="svc-item">
+      <div class="svc-icon"><svg viewBox="0 0 24 24" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></div>
+      <div>
+        <div class="svc-name">Estrategia de marca</div>
+        <div class="svc-desc">Definimos tu identidad visual, tono de comunicación y posicionamiento. Construimos una marca coherente y memorable que genere confianza desde el primer contacto.</div>
+      </div>
+      <div class="svc-tag">Único</div>
+    </div>
+  </div>
+</div>
+
+<!-- PLANES -->
+<div class="plans-section reveal" id="planes">
+  <div class="plans-inner">
+    <div class="section-label">Precios</div>
+    <h2 class="section-title">Elige tu paquete</h2>
+    <p class="section-sub">Planes diseñados para todo tipo de negocio. Sin contratos forzosos, sin letra pequeña.</p>
+
+    <p style="font-size:11px;font-weight:500;letter-spacing:3px;color:var(--coral);text-transform:uppercase;margin-top:2.5rem;margin-bottom:1rem;">Paquetes mensuales</p>
+    <div class="plans-grid">
+      <div class="plan-card">
+        <div class="plan-name">Básico</div>
+        <div class="plan-price">$2,500</div>
+        <div class="plan-per">por mes · MXN</div>
+        <div class="plan-divider"></div>
+        <ul class="plan-features">
+          <li><span class="check"></span>8 posts diseñados al mes</li>
+          <li><span class="check"></span>1 red social (Facebook o Instagram)</li>
+          <li><span class="check"></span>Diseño con identidad de marca</li>
+          <li><span class="check"></span>Reporte mensual de resultados</li>
+        </ul>
+      </div>
+      <div class="plan-card featured">
+        <div class="plan-badge">Más popular</div>
+        <div class="plan-name">Estándar</div>
+        <div class="plan-price">$4,000</div>
+        <div class="plan-per">por mes · MXN</div>
+        <div class="plan-divider"></div>
+        <ul class="plan-features">
+          <li><span class="check"></span>12 posts diseñados al mes</li>
+          <li><span class="check"></span>2 redes sociales (Facebook + Instagram)</li>
+          <li><span class="check"></span>Diseño con identidad de marca</li>
+          <li><span class="check"></span>4 stories semanales al mes</li>
+          <li><span class="check"></span>Reporte mensual de resultados</li>
+        </ul>
+      </div>
+      <div class="plan-card">
+        <div class="plan-name">Premium</div>
+        <div class="plan-price">$6,500</div>
+        <div class="plan-per">por mes · MXN</div>
+        <div class="plan-divider"></div>
+        <ul class="plan-features">
+          <li><span class="check"></span>16 posts diseñados al mes</li>
+          <li><span class="check"></span>3 redes (Facebook + Instagram + TikTok)</li>
+          <li><span class="check"></span>Diseño con identidad de marca</li>
+          <li><span class="check"></span>8 stories semanales al mes</li>
+          <li><span class="check"></span>Calendario editorial mensual</li>
+          <li><span class="check"></span>Reporte detallado de métricas</li>
+        </ul>
+      </div>
+    </div>
+
+    <p style="font-size:11px;font-weight:500;letter-spacing:3px;color:var(--coral);text-transform:uppercase;margin-top:3rem;margin-bottom:1rem;">Servicio único</p>
+    <div class="plans-grid" style="grid-template-columns:minmax(240px,500px);">
+      <div class="plan-card" style="border:2px solid var(--coral);">
+        <div class="plan-badge">Inversión única</div>
+        <div class="plan-name">Estrategia de marca</div>
+        <div class="plan-price">$8,000</div>
+        <div class="plan-per">pago único · MXN</div>
+        <div class="plan-divider"></div>
+        <ul class="plan-features">
+          <li><span class="check"></span>Análisis de mercado y competencia</li>
+          <li><span class="check"></span>Definición de identidad visual</li>
+          <li><span class="check"></span>Manual de marca básico</li>
+          <li><span class="check"></span>Paleta de colores y tipografías</li>
+          <li><span class="check"></span>Tono y voz de comunicación</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="cta-section" id="contacto">
+  <div class="cta-wrap reveal">
+    <div class="cta-title">¿Listo para hacer<br>crecer tu marca?</div>
+    <p class="cta-sub">Contáctanos hoy y recibe una propuesta personalizada sin costo. Respondemos el mismo día.</p>
+    <div class="contact-btns">
+      <a href="https://wa.me/524434425827?text=Hola%20Mictlan,%20quiero%20información%20sobre%20marketing%20digital" class="btn-wa" target="_blank">WhatsApp</a>
+      <a href="/cdn-cgi/l/email-protection#137e7a70677f727d7f7c747a60677a706053747e727a7f3d707c7e2c606671797670672e507c677a6972707ad0a07d3621235e72617876677a7d74362123577a747a67727f3621233e3621235e7a70677f727d" class="btn-white">Correo electrónico</a>
+    </div>
+  </div>
+</div>
+
+<!-- WHATSAPP FLOTANTE -->
+<a href="https://wa.me/524434425827?text=Hola%20Mictlan,%20quiero%20información%20sobre%20marketing%20digital" class="wa-float" target="_blank">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width:28px;height:28px;fill:#fff;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => { if(entry.isIntersecting) entry.target.classList.add('visible'); });
+}, {threshold:0.15});
+document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale').forEach(el => observer.observe(el));
+</script>
+
+<footer>
+  <div class="footer-inner">
+    <p class="footer-copy">© 2026 <span>Mictlan</span> · Morelia, Michoacán</p>
+    <div class="footer-social">
+      <a href="https://instagram.com" class="social-link social-ig" target="_blank" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+      </a>
+      <a href="https://facebook.com" class="social-link social-fb" target="_blank" aria-label="Facebook">
+        <svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+      </a>
+      <a href="https://wa.me/524434425827" class="social-link social-wa" target="_blank" aria-label="WhatsApp">
+        <svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      </a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
